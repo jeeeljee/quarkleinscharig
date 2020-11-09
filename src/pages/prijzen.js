@@ -2,7 +2,7 @@ import React from "react";
 import theme from "theme";
 import { Theme, Link, Text, Box } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
-import { Section } from "@quarkly/components";
+import { Override, Menu, Section } from "@quarkly/components";
 export default (() => {
 	return <Theme theme={theme}>
 		<Helmet>
@@ -12,6 +12,32 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
+		<Section>
+			<Box
+				display="flex"
+				padding="12px 0"
+				justify-content="space-between"
+				align-items="center"
+				flex-direction="row"
+				md-flex-direction="column"
+			>
+				<Text margin="0" md-margin="0px 0 20px 0" text-align="left" font="--lead">
+					Awesome Company
+				</Text>
+				<Menu
+					display="flex"
+					justify-content="center"
+					font="--base"
+					font-weight="700"
+					md-flex-direction="column"
+					md-align-items="center"
+				>
+					<Override slot="link" text-decoration="none" color="--dark" padding="6px 12px" />
+					<Override slot="link-active" color="--primary" />
+					<Override slot="item" padding="6px" />
+				</Menu>
+			</Box>
+		</Section>
 		<Section padding="140px 0" sm-padding="40px 0" background="url(https://images.unsplash.com/photo-1593642532744-d377ab507dc8?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0MjIzN30&w=2000) center/cover">
 			<Box max-width="240px" padding="50px 80px 80px 50px" background="--color-light" color="--dark">
 				<Text
